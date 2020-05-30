@@ -94,11 +94,38 @@ header {
     --gray4: #454e56;
     --gray5: #2a2e35;
     --gray6: #12181b;
-    --blue: #0084a5
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #fff565;
 }
 
-.light {}
+.light {
+    --bg: (var--gray0);
+    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+    --bg-dropown: var(--gray0);
+    --text: var(--blue);
+    --border-color: var(--blue);
+    --bg-solar: var(--yellow);
+
+}
 
 .dark {}
 
 .solar {}
+
+/* logo animation */
+@keyframes color-rotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.logo:hover {
+    animation: color-rotate 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
