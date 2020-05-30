@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 ul {
@@ -18,8 +21,8 @@ a {
 .navbar {
     height: 70px;
     width: 100%;
-    background: black;
-    color: white;
+    background: var(--bg-nav);
+    color: var(--text);
 }
 
 .navbar-nav {
@@ -31,7 +34,7 @@ a {
 
 header {
     padding: 1em;
-    background: red;
+    background: var(--bg);
     margin-bottom: 1em;
     padding-bottom: 3.5em;
     text-align: center;
@@ -43,8 +46,8 @@ header {
     width: 500px;
     opacity: 0;
     z-index: 2;
-    background: blue;
-    border-top: 2px solid white;
+    background: var(--bg-dropown);
+    border-top: 2px solid var(--purple);
 
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -77,7 +80,7 @@ header {
 
 .dropdown-item a::before {
     content: ' ';
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
@@ -109,9 +112,22 @@ header {
 
 }
 
-.dark {}
+.dark {
+    --bg: var(--gray5);
+    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    --bg-dropdown: var(--gray6);
+    --text: var(--gray0);
+}
 
-.solar {}
+.solar {
+    --gray0: #fbffd4;
+    --gray1: #f7f8d0;
+    --gray2: #b6f880;
+    --gray3: #5ec72d;
+    --gray4: #3ea565;
+    --gray5: #005368;
+    --gray6: #003d4c;
+}
 
 /* logo animation */
 @keyframes color-rotate {
